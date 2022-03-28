@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts/remixicon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h4 class="text-info">FAQs Sample (Apply jQuery)</h4>
+                        <h6 class="text-primary">Bootstrap & jQuery</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12">
+                    <div class="faq-list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jQuery.js"></script>
+<script>
+    let data = {
+        "status": "ok",
+        "totalResults": 70,
+        "articles": [
+            {
+                "source": {
+                    "id": null,
+                    "name": "CNBC"
+                },
+                "author": "Saheli Roy Choudhury",
+                "title": "SoftBank-backed Indian start-up Oyo files for $1.2 billion IPO - CNBC",
+                "description": "Oyo will issue new shares worth up to 70 billion rupees and an offer for sale worth another 14.3 billion by existing shareholders.",
+                "url": "https://www.cnbc.com/2021/10/01/softbank-backed-indian-start-up-oyo-files-for-1point2-billion-ipo.html",
+                "urlToImage": "https://image.cnbcfm.com/api/v1/image/106098170-1566891443907gettyimages-1157449109.jpeg?v=1633057627",
+                "publishedAt": "2021-10-01T05:18:08Z",
+                "content": "Indian hotel chain Oyo is planning to raise about 84.3 billion rupees ($1.16 billion) in an initial public offering, according to draft papers submitted to the country's market regulator.\r\nOyo plans … [+1568 chars]"
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "WOLF STREET"
+                },
+                "author": null,
+                "title": "US Dollar Status as Dominant “Global Reserve Currency” amid Reckless QE & Government Deficits - WOLF STREET",
+                "description": "The decline of Dollar Hegemony. But other options are also shaky.",
+                "url": "https://wolfstreet.com/2021/09/30/us-dollar-as-global-reserve-currency-in-a-world-of-reckless-qe-government-deficits/",
+                "urlToImage": "https://wolfstreet.com/wp-content/uploads/2021/09/Global-Reserve-Currencies-2021-09-30-share-time-ex-USD-EUR.png",
+                "publishedAt": "2021-10-01T04:18:45Z",
+                "content": "The decline of Dollar Hegemony. But other options are also shaky.\r\nThe global share of US-dollar-denominated exchange reserves these are financial assets such as US Treasury securities, US corporate … [+5709 chars]"
+            },
+            {
+                "source": {
+                    "id": "the-verge",
+                    "name": "The Verge"
+                },
+                "author": "Catie Keck, Sam Byford",
+                "title": "YouTube TV and NBCUniversal agree to ‘short’ extension to avoid channels disappearing - The Verge",
+                "description": "YouTube TV and NBCUniversal agreed to a short extension of their ongoing negotiations. That means that YouTube TV will continue to carry more than a dozen major NBCUniversal-owned channels, including NBC regional sports networks — but it also means YouTube TV…",
+                "url": "https://www.theverge.com/2021/9/30/22702511/youtube-tv-nbcuniversal-extension-dispute-negotiation",
+                "urlToImage": "https://cdn.vox-cdn.com/thumbor/FU8RO1f9NSFhDH5vchwlcnmMrqE=/0x715:5000x3333/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22890985/1224647361.jpg",
+                "publishedAt": "2021-10-01T03:23:37Z",
+                "content": "YouTube TV was ready to lower its price\r\nPhoto Illustration by Rafael Henrique/SOPA Images/LightRocket via Getty Images\r\nFollowing a public standoff earlier this week, YouTube TV and NBCUniversal hav… [+2580 chars]"
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "New York Post"
+                },
+                "author": "Samuel Chamberlain",
+                "title": "Sen. Richard Blumenthal asks Facebook exec to 'end finsta' at hearing - New York Post ",
+                "description": "Sen. Richard Blumental asked a top Facebook executive on Thursday if the company would “commit to ending ‘finsta'” – apparently unaware of the term’s true meaning.",
+                "url": "https://nypost.com/2021/09/30/sen-richard-blumenthal-asks-facebook-exec-to-end-finsta-at-hearing/",
+                "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2021/09/facebook-finsta-index.jpg?quality=90&strip=all&w=1024",
+                "publishedAt": "2021-10-01T03:00:00Z",
+                "content": "Sen. Richard Blumental asked a top Facebook executive on Thursday if the company would commit to ending ‘finsta'” apparently unaware of the term’s true meaning.\r\nBlumenthal (D-Conn.) questioned Faceb… [+2289 chars]"
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "Fox Business"
+                },
+                "author": "Breck Dumas",
+                "title": "Leon Cooperman and family donate $100M to hospital - Fox Business",
+                "description": "Billionaire Leon Cooperman and his wife Toby have donated $100 million to a New Jersey hospital",
+                "url": "https://www.foxbusiness.com/markets/leon-cooperman-and-family-donate-100m-to-hospital",
+                "urlToImage": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2018/02/0/0/aa42d973-leon-cooperman.jpg?ve=1&tl=1",
+                "publishedAt": "2021-10-01T01:39:46Z",
+                "content": "Wall Street icon Leon Cooperman and his wife Toby have given a $100 million gift to a New Jersey hospital, which will now be renamed after the family.\r\nThe Cooperman Family Foundation's donation to S… [+1516 chars]"
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "KOMO News"
+                },
+                "author": "Suzanne Phan, KOMO News Reporter",
+                "title": "Workers reach deadline to vaccinate or face termination; Businesses back mandate - KOMO News",
+                "description": "As the push to get employees vaccinated intensifies, we're starting to see the consequences of not getting the shots. People are starting to lose their jobs for not complying with company rules. United Airlines, for example, now says it plans on firing about …",
+                "url": "https://komonews.com/news/local/workers-reach-deadline-to-vaccinate-or-face-termination-businesses-back-mandate",
+                "urlToImage": "https://static-25.sinclairstoryline.com/resources/media/b287f695-9843-4cfa-ac77-631f7d588f85-large16x9_c1d2cd522daf4347aa5bfe8238f931a2johnsonjohnsonvaccineAP.png?1633051787368",
+                "publishedAt": "2021-10-01T01:33:18Z",
+                "content": null
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "kwwl.com"
+                },
+                "author": "KWWL",
+                "title": "John Deere employees on brink of strike as contracts end at Midnight - kwwl.com",
+                "description": "WATERLOO, Iowa (KWWL) -- John Deere union employees are waiting to hear if they have a new contract or a contract extension as they prepare for a possible strike.",
+                "url": "https://www.kwwl.com/news/waterloo/john-deere-employees-on-brink-of-strike-as-contracts-end-at-midnight/article_fe331270-2254-11ec-92b2-b78dbc14aeb8.html",
+                "urlToImage": "https://bloximages.newyork1.vip.townnews.com/kwwl.com/content/tncms/assets/v3/editorial/1/d7/1d71df28-39c6-5443-9e3b-c18884464f2a/6156709d955cf.image.jpg?resize=1120%2C630",
+                "publishedAt": "2021-10-01T01:14:00Z",
+                "content": null
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "Barron's"
+                },
+                "author": null,
+                "title": "Zoom Acquisition of Five9 Collapses After Shareholders Vote it Down - Barron's",
+                "description": "The merger had been opposed by an influential proxy-analysis firm, and the federal government had said it might pose national security risk.",
+                "url": "https://www.barrons.com/articles/zoom-acquisition-of-five9-collapses-after-shareholders-vote-it-down-51633047680",
+                "urlToImage": "https://images.barrons.com/im-371425/social",
+                "publishedAt": "2021-10-01T00:21:00Z",
+                "content": "Videoconferencing giant \r\nZoom Video Communications\r\nand cloud-based contact center software company \r\nFive9\r\nhave agreed to terminate their merger agreement, the companies said Thursday afternoon. T… [+2280 chars]"
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "Yahoo Entertainment"
+                },
+                "author": "Allie Hogan",
+                "title": "If You Have One of These Popular Cars, Get It Inspected Immediately - Yahoo Lifestyle",
+                "description": "You probably don't think too much when you get in your car every day and drive to work, to the store, to the gym, or wherever you have to go—of course, it's ...",
+                "url": "https://www.yahoo.com/lifestyle/one-popular-cars-inspected-immediately-230548290.html",
+                "urlToImage": "https://s.yimg.com/uu/api/res/1.2/Y672etP5iyNKouLjTuoEBg--~B/aD03OTg7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/best_life_342/7c803d21862ff55ab994be997fd89d27",
+                "publishedAt": "2021-09-30T23:05:48Z",
+                "content": "You probably don't think too much when you get in your car every day and drive to work, to the store, to the gym, or wherever you have to goof course, it's easy to take for granted when your car is r… [+3867 chars]"
+            },
+            {
+                "source": {
+                    "id": "the-verge",
+                    "name": "The Verge"
+                },
+                "author": "Ian Carlos Campbell",
+                "title": "TikTok is getting into NFTs with TikTok Top Moments - The Verge",
+                "description": "TikTok is launching TikTok Top Moments in October, a collection of NFTs created in partnership with creators and NFT artists. The collection is inspired by six important TikTok videos, and launches October 6th with an auction of a Lil Nas X and Rudy Willingha…",
+                "url": "https://www.theverge.com/2021/9/30/22702871/lil-nas-x-tiktok-top-moments-nfts-auction",
+                "urlToImage": "https://cdn.vox-cdn.com/thumbor/ll7UInG5r1-TxjRIvvy-oDfQRwE=/0x0:2760x1445/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22892034/1340301664.jpg",
+                "publishedAt": "2021-09-30T22:39:42Z",
+                "content": "Commemorating viral moments and benefiting creators\r\nPhoto by Cindy Ord/Getty Images for SiriusXM\r\nBecause no peace can be found in the age of man, TikTok has decided to partner with select creators,… [+2089 chars]"
+            },
+            {
+                "source": {
+                    "id": "cnn",
+                    "name": "CNN"
+                },
+                "author": "Rob McLean, CNN Business",
+                "title": "Neiman Marcus alerts millions of online customers about security breach - CNN",
+                "description": "Neiman Marcus Group is alerting millions of customers that their online accounts may have been breached.",
+                "url": "https://www.cnn.com/2021/09/30/tech/neiman-marcus-security-breach/index.html",
+                "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/210930181312-restricted-neiman-marcus-california-2020-super-tease.jpg",
+                "publishedAt": "2021-09-30T22:37:00Z",
+                "content": null
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "MarketWatch"
+                },
+                "author": "Thornton McEnery",
+                "title": "Meme-stock traders revel in more anti-Citadel and Robinhood drama as old names come back to life - MarketWatch",
+                "description": "Citadel is tweeting again",
+                "url": "https://www.marketwatch.com/story/meme-stock-traders-revel-in-more-anti-citadel-and-robinhood-drama-as-old-names-come-back-to-life-11633040976",
+                "urlToImage": "https://images.mktw.net/im-272874/social",
+                "publishedAt": "2021-09-30T22:29:00Z",
+                "content": "Retail investors rallying around a bad news cycle for some of their least favorite people also managed to buck the larger indices and put major meme stocks back in the green as September drew to a cl… [+4234 chars]"
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "Investor's Business Daily"
+                },
+                "author": "Investor's Business Daily",
+                "title": "Dow Jones Futures: No End To Stock Market Woes; Infrastructure Bill In Doubt, Tesla Deliveries Loom - Investor's Business Daily",
+                "description": "Stocks closed at lows again. Congress averted a shutdown, but will infrastructure pass?",
+                "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-stock-market-woes-infrastructure-bill-in-doubt-tesla-deliveries-loom/",
+                "urlToImage": "https://www.investors.com/wp-content/uploads/2021/09/Stock-capitalhilll-11-adobe.jpg",
+                "publishedAt": "2021-09-30T22:24:00Z",
+                "content": "Dow Jones futures rose slightly late Thursday, along with S&amp;P 500 futures and Nasdaq futures, with a possible infrastructure bill vote and Tesla deliveries in focus. The stock market made another… [+9674 chars]"
+            },
+            {
+                "source": {
+                    "id": null,
+                    "name": "WFMZ Allentown"
+                },
+                "author": "Holly Harrar",
+                "title": "USPS changes include longer delivery times for 1st-class mail, cuts to post office hours - 69News WFMZ-TV",
+                "description": "The U.S. Postal Service will implement new service standards starting Oct. 1.",
+                "url": "https://www.wfmz.com/news/area/lehighvalley/usps-changes-include-longer-delivery-times-for-1st-class-mail-cuts-to-post-office-hours/article_0b220302-2236-11ec-b766-fb66260ad2d6.html",
+                "urlToImage": "https://bloximages.newyork1.vip.townnews.com/wfmz.com/content/tncms/assets/v3/editorial/e/ee/eeee763d-a28d-524e-8f8f-173de3c9fe81/6156371be13e1.image.jpg?resize=1120%2C630",
+                "publishedAt": "2021-09-30T22:15:00Z",
+                "content": "Longer delivery times for first-class mail and cuts to post office hours are two of the main changes customers will start to see, as the U.S. Postal Service implements new service standards starting … [+1333 chars]"
+            }
+        ]
+    }
+
+    let article = data.articles;
+    article.map(el=>{
+
+    $(".faq-list").append(`
+        <div class="faq-item border rounded">
+                            <div class="border-bottom p-3 d-flex justify-content-between align-items-center">
+                                <p class="font-weight-bold mb-0 faq-item-title">
+                                    ${el.title}
+                                </p>
+                                <i class="faq-icon ri-arrow-down-s-fill font-weight-bolder h4"></i>
+                            </div>
+                            <div class="p-3 bg-light faq-item-body">
+                                <p class="">
+                                    ${el.description}
+                                </p>
+                            </div>
+                        </div>
+`);
+ });
+$(".faq-item").click(function(){
+    $(".faq-item-body").fadeOut(500);
+    $(".faq-icon").removeClass("rotate");
+
+    $(this).children(".faq-item-body").toggle(500);
+    $(this).children().children(".faq-icon").toggleClass("rotate");
+})
+
+</script>
+
+</html>

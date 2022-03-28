@@ -1,0 +1,14 @@
+.faq-item:hover{
+    background-color:rgba(173, 216, 230, 0.336);
+}
+
+.faq-item-body{
+    display: none;
+}
+.faq-icon{
+    transition: 0.5s;
+}
+
+.faq-icon.rotate{
+    transform: rotate(180deg);
+}
